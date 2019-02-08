@@ -1,0 +1,31 @@
+Blocked Clause Elimination Encoding version 0.78
+USAGE: java -jar enc.jar input.cnf [-option | -option=value]
+Options:
+ -h		print this help
+ -v=INT		verbosity level, default is 1, 0 is silent
+ -e=<encoding>	encoding type, one of the following:
+	o:	 original (default)
+	c:	 original with closed cycles
+	s:	 selective
+	b:	 butterfly (ribbon with cycles)
+	r:	 ribbon (butterfly without cycles)
+ -d=<decomp>	decomposition algorithm, one of the following:
+	p:	 pure decomposition after unit propagation (default)
+	u:	 unit decomposition
+	c:	 unit decomposition, if not succesfull then pure
+ -p=<postproc>	postprocessing after decomposition, one of the following:
+	b:	 move blocked clauses
+	bb:	 move blocked and blockable clauses
+	e:	 eagerly move clauses (slow)
+	c:	 combine eager and bb
+	q:	 quick decompose - produce maximal large set (very slow)
+ -l=<lock>	variable locking policy, one of the following:
+	n:	 none (default)
+	r:	 all variables in the smaller blocked set
+	b:	 blocking literals in the smaller blocked set
+	c:	 common blocking literals
+ -f		negate the locking policy (flip locked vs not-locked vars)
+ -o=Filename	output filename (default is stdout)
+ -x		only do decomposition (if -o=file is set, then the output will be in file.bsl and file.bss)
+ -s		only do decomposition and output for sblitter (append small set)
+ -a		generate an AIG and output the formula in the aiger format

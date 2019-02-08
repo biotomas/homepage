@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Paswd Generator</title>
+</head>
+<body>
+
+<h1>Password Generator</h1>
+
+<p>
+Generates a random permutation of the <a href="https://www.random.org/passwords/?num=1&len=24&format=html&rnd=new">
+random.org</a> password generator output.
+</p>
+
+<script>
+
+String.prototype.shuffle = function () {
+    var a = this.split(""),
+        n = a.length;
+
+    for(var i = n - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = a[i];
+        a[i] = a[j];
+        a[j] = tmp;
+    }
+    return a.join("");
+}
+
+function httpGet(theUrl) {
+    if (window.XMLHttpRequest) {
+        xmlhttp=new XMLHttpRequest();
+    }
+    xmlhttp.onreadystatechange=function() {
+        if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+					randpaswd = xmlhttp.response.match("<ul class=\"data\">\n<li>(.*)<\/li>")[1]
+					document.getElementById('demo').innerHTML = randpaswd.shuffle()
+					return xmlhttp.statusText;
+        }
+    }
+    xmlhttp.open("GET", "https://www.random.org/passwords/?num=1&len=24&format=html&rnd=new", false );
+    xmlhttp.send();    
+}
+
+</script> 
+
+<button type="button" onclick="httpGet()">Generate!</button>
+<p>Your password is:</p>
+<div id="demo"></div>
+</body>
+</html> 
+
