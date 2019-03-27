@@ -10,7 +10,7 @@
 
 % moderncv themes
 \moderncvstyle{banking}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
-\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+\moderncvcolor{burgundy}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 %\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
@@ -36,7 +36,7 @@
 %\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
 \social[github]{biotomas}                              % optional, remove / comment the line if not wanted
 %\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
-%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+\photo[64pt][0.4pt]{selfportrait}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 %\quote{Some quote}                                 % optional, remove / comment the line if not wanted
 
 % bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
@@ -55,25 +55,27 @@
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
-
+\vspace{-2em}
 \section{Education}
 \cventry{2010--2014}{PhD}{Charles University}{Prague}{supervised by \textit{Roman Bart\'ak}}{Topic: Modeling and Solving Problems Using SAT Techniques}  % arguments 3 to 6 can be left empty
 \cventry{2008--2010}{Msc.}{Charles University}{Prague}{supervised by \textit{Pavel Surynek}}{Topic: Solving Boolean Satisfiability Problems}  % arguments 3 to 6 can be left empty
 
 \section{Work Experience}
-\cventry{2014--Present}{Post-doctoral Researcher}{Karlsruhe Institute of Technology}{Karlsruhe}{}{Research and developement of Satisfiabiality solving techniques for massively parallel environments.}
+\cventry{2014--Present}{Post-doctoral Researcher in the group of prof. Peter Sanders}{Karlsruhe Institute of Technology -- Institute of Theoretical Informatics}{Karlsruhe}{}{Research and developement of Satisfiabiality solving techniques for massively parallel environments.}
 \cventry{2010}{J2EE Developer}{Orchitech Solutions}{Prague}{}{Developement of internal identity and access
 management systems for a telecommunication company.}
 
 \section{Research Interests}
-\cvitem{Satsfiability Solving and Apllications}{also related problems such as MaxSAT, QBF, SMT}
-\cvitem{Automated Planning}{for diverse A.I. applications such as robotics, logistics, virtual agents}
+\cvitem{Satsfiability Solving and Apllications}{Also related problems such as MaxSAT, QBF, SMT}
+\cvitem{Automated Planning}{Used in diverse A.I. applications such as robotics, logistics, virtual agents}
+\cvitem{Hard Optimization Problems}{NP-hard optimization problems solved by exact/heuristic algorithms}
+\cvitem{Parallel Algorithms}{Design and implement parallel versions of NP-hard problem solvers}
 
 \section{Selected Publications}
 \cvitem{SAT Race 2015}{Tomas Balyo, Armin Biere, Markus Iser and Carsten Sinz, Artificial Intelligence vol. 241}
 \cvitem{HordeSat -- A Massively Parallel Portfolio SAT Solver}{T. Balyo, P. Sanders, C. Sinz, SAT 2015}
 \cvitem{Accelerating SAT Based Planning with Incremental SAT }{Tomas Balyo, Stephan Gocht, ICAPS 2017}
-\cvitem{}{Full list of publivations: \url{https://algo2.iti.kit.edu/balyo/index.php?page=Research}}
+\cvitem{}{Full list of publications: \url{https://algo2.iti.kit.edu/balyo/index.php?page=Research}}
 
 \section{Skills and Languages}
 \cvdoubleitem{Skills}{design of parallel optimization algorithms}{Programming}{C/C++, Java, C\#, PhP, Javascript}
